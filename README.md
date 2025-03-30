@@ -8,7 +8,7 @@ HazeScene is a simulated haze dataset, rather than an actual haze scene. This da
 
 For any of the light, medium and heavy levels, there are 582 pairs of images within HazeScene. The HazeScene Dataset is a performance test dataset that is available for download from Baidu Netdisk and Google Drive. The detailed address is as follows:
 
-百度网盘：[HazeScene](https://pan.baidu.com/s/12U0csV-2s7wsz3emLqfgvw) password: y6re
+百度网盘：[download HazeScene](https://pan.baidu.com/s/1lbXfT3h7geAM1toCF7Fzmw) password: cfag
 
-Google Drive: [HazeScene]
+Google Drive: [download HazeScene]
 
