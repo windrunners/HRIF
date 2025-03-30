@@ -10,5 +10,5 @@ For any of the light, medium and heavy levels, there are 582 pairs of images wit
 
 百度网盘：[download HazeScene](https://pan.baidu.com/s/1lbXfT3h7geAM1toCF7Fzmw) password: cfag
 
-Google Drive: [download HazeScene]
+Google Drive: [download HazeScene](https://drive.google.com/file/d/1ZFKOR307mot-VXnirIaJjfsWDT3U5FOH/view?usp=drive_link)
 
