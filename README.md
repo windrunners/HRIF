@@ -33,18 +33,18 @@ import cv2
 import numpy as np
 import os
 def compute_dark_channel(img, patch_size=15):
-    """计算暗通道"""
-    min_channel = np.min(img, axis=2)  # 取RGB三通道最小值
+    """Calculate the dark channel"""
+    min_channel = np.min(img, axis=2)  # Take the minimum value of the three channels (Red, Green, Blue)
     kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (patch_size, patch_size))
-    dark_channel = cv2.erode(min_channel, kernel)  # 最小值滤波
+    dark_channel = cv2.erode(min_channel, kernel)  # Minimum value filtering
     return dark_channel
 def calculate_smoke_concentration(img):
-    """计算单张图像的烟雾浓度（暗通道均值标准化到0-1）"""
+    """Calculate the smoke concentration of a single image (normalize the dark channel to the range of 0-1)"""
     dark = compute_dark_channel(img)
-    concentration = np.mean(dark) / 255.0  # 标准化到[0, 1]
+    concentration = np.mean(dark) / 255.0  # Standardized to [0, 1]
     return concentration
 def batch_calculate_smoke(image_folder, output_file="smoke_concentration_results.txt"):
-    """批量计算文件夹中所有图像的烟雾浓度（0-1）"""
+    """Calculate the smoke concentration (0-1) of all images in the batch folder"""
     concentrations = []
     results = []
     for filename in os.listdir(image_folder):
@@ -55,18 +55,18 @@ def batch_calculate_smoke(image_folder, output_file="smoke_concentration_results
                 continue
             concentration = calculate_smoke_concentration(img)
             concentrations.append(concentration)
-            results.append(f"{filename}: {concentration:.4f}")  # 保留4位小数
-    # 计算平均值
+            results.append(f"{filename}: {concentration:.4f}")  # Keep 4 decimal places
+    # Calculate the average value
     avg_concentration = np.mean(concentrations) if concentrations else 0
     results.append(f"\nAverage smoke concentration: {avg_concentration:.4f}")
-    # 保存结果到文件
+    # Save the results to a file
     with open(output_file, "w") as f:
         f.write("\n".join(results))
     print(f"Results saved to {output_file}")
     print(f"Average smoke concentration: {avg_concentration:.4f}")
     return concentrations, avg_concentration
-# 计算调用
-image_folder = "your_image_folder"  # 替换为你的图像文件夹路径
+# Calculation
+image_folder = "your_image_folder"  # Replace with the path of your image folder
 concentrations, avg = batch_calculate_smoke(image_folder)
 ```
 
