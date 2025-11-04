@@ -1,0 +1,1 @@
+The HazeScene folder contains three subfolders: clear, hazy and test. Please use the dataset mentioned above.
