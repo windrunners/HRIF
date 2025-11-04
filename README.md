@@ -1,9 +1,10 @@
 
-# When the paper is accepted, we will make the code public.
-
-
 # Introduction to HRIF
 HRIF is a direct haze removal image fusion method for infrared and visible images. It belongs to the subfield of infrared and visible image fusion. The algorithm can fuse the visible image with haze and infrared image, and generate the fusion image without haze.
+
+<img width="3745" height="1747" alt="图1" src="https://github.com/user-attachments/assets/fc57a12f-e322-4777-9190-290ea6a376eb" />
+
+
 
 # HazeScene Dataset
 HazeScene is a single mode haze dataset in which visible images contain haze and infrared images do not. The haze level of visible images includes light, medium, heavy and heavy-various levels.
