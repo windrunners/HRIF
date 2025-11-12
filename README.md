@@ -79,6 +79,7 @@ concentrations, avg = batch_calculate_smoke(image_folder)
   volume={36},
   number={11},
   pages={115403},
-  year={2025}
+  year={2025},
+  publisher={IOP Publishing}
 }
 ```
