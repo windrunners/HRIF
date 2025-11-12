@@ -76,6 +76,9 @@ concentrations, avg = batch_calculate_smoke(image_folder)
   title={HRIF: haze removal image fusion for visible and infrared images},
   author={Zhao, Yangyang and Li, Wenjun and Yu, Zhiyong},
   journal={Measurement Science and Technology},
+  volume={36},
+  number={11},
+  pages={115403},
   year={2025}
 }
 ```
